@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+
+
+</head>
+
+
+<body>
+
+    <h1>Registro de Persona</h1>
+
+    <form id="form">
+        <!-- Nombre (Requerido, solo letras, mínimo 2 caracteres) -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" pattern="[A-Za-z\s]{2,}" required><br />
+
+        <!-- Apellido (Requerido, solo letras, mínimo 2 caracteres) -->
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" pattern="[A-Za-z\s]{2,}" required><br />
+
+        <!-- Email (Requerido, formato de correo electrónico) -->
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required><br />
+
+        <!-- Teléfono (Opcional, solo números, mínimo 7 y máximo 15 caracteres) -->
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" pattern="\d{7,15}"><br />
+
+        <!-- Edad (Requerido, debe ser un número entre 1 y 120) -->
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" min="1" max="120" required><br />
+
+        <!-- Fecha de nacimiento (Requerido, debe ser una fecha válida) -->
+        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br />
+
+        <!-- Enviar el formulario -->
+        <button type="submit">Registrar</button>
+    </form>
+    <script>
+        const formulario = document.getElementById('form');
+        if (formulario) {
+            formulario.addEventListener('submit', (e) => {
+                e.preventDefault();
+                console.log({
+                    nombre: e.target.nombre.value,
+                    apellido: e.target.apellido.value,
+                    email: e.target.email.value,
+                    telefono: e.target.telefono.value,
+                    edad: e.target.edad.value,
+                    fecha_nacimiento: e.target.fecha_nacimiento.value
+                });
+            });
+        }
+    </script>
+
+</body>
+
+
+
+</html>
