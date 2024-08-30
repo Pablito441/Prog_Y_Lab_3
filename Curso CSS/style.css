@@ -1,0 +1,43 @@
+.container{
+    width: 40vh;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    border: none;
+    padding: o.4rem;
+    background-color: rgb(120, 172, 218);
+    border-radius: 0.4rem;
+    color: white;
+    width: 200px;
+    text-align: center;
+    font-size: 1.4rem;
+    transition: 0.3s ease;
+}
+
+.box2{
+    border: none;
+    padding: o.4rem;
+    background-color: rgb(120, 172, 218);
+    border-radius: 0.4rem;
+    color: white;
+    width: 200px;
+    text-align: center;
+    font-size: 1.4rem;
+    animation: mover 2s infinite;
+}
+
+@keyframes mover {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(100px);
+    }
+    1000%{
+        transform: translateX(200px);
+    }
+}
