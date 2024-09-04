@@ -1,0 +1,15 @@
+/* Cambiar el tamaño de la fuente */
+.texto-grande {
+    font-size: 24px;
+}
+
+/* Alinear el texto al centro */
+.texto-centrado {
+    text-align: center;
+}
+
+/* Cambiar la familia de la fuente */
+.texto-diferente {
+    font-family: 'Courier New', Courier, monospace;
+    color: #555;
+}

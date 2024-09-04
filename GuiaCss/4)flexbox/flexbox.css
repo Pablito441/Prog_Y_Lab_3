@@ -1,0 +1,60 @@
+/* Contenedor principal que usa Flexbox */
+.contenedor {
+  background-color: khaki;      /* Color de fondo del contenedor */
+  padding: 5px;                 /* Espacio interno alrededor del contenido */
+  border: 1px solid black;      /* Borde de 1px sólido negro */
+  
+  display: flex;                /* Activar Flexbox para el contenedor */
+  
+  /* Dirección de los elementos: en una fila (row) */
+  flex-direction: row;          
+  /* flex-direction: column;   // Alternativa para colocar en columna */
+
+  /* Permitir que los elementos se envuelvan a la siguiente línea si no caben */
+  flex-wrap: wrap;              
+  /* flex-wrap: nowrap;        // Alternativa para evitar que se envuelvan */
+
+  /* Combina la dirección y la envoltura en una sola línea */
+  flex-flow: row wrap;          
+
+  /* Justificación del contenido: al inicio del eje principal (horizontal) */
+  justify-content: flex-start;  
+  /* justify-content: center;  // Alternativa para centrar horizontalmente */
+  /* justify-content: space-between;  // Alternativa para espaciar entre elementos */
+  
+  /* Alineación de los elementos en el eje transversal (vertical) */
+  align-items: stretch;         
+  /* align-items: flex-start;   // Alternativa para alinear al inicio vertical */
+  /* align-items: center;       // Alternativa para centrar verticalmente */
+
+  /* Alineación del contenido cuando hay múltiples líneas */
+  align-content: center;        
+  /* align-content: space-between; // Alternativa para espaciar entre líneas */
+
+  height: 500px;                /* Altura fija del contenedor */
+}
+
+/* Estilos para cada caja dentro del contenedor Flexbox */
+.caja {
+  border: 3px solid black;      /* Borde de 3px sólido negro */
+  font-size: 2rem;              /* Tamaño de fuente grande para resaltar el texto */
+  text-align: center;           /* Alinear el texto al centro de la caja */
+  margin: 10px;                 /* Espacio alrededor de cada caja */
+  
+  width: 150px;                 /* Ancho fijo de 150px para cada caja */
+}
+
+/* Alinear un elemento individualmente en el eje transversal */
+.caja-align-self-center {
+  align-self: center;           /* Alinea esta caja al centro del eje transversal */
+}
+
+/* Permite que los elementos crezcan para ocupar espacio adicional */
+.caja-grow {
+  flex-grow: 2;                 /* Permite que esta caja crezca el doble que sus hermanos */
+}
+
+/* Evita que los elementos se achiquen cuando el contenedor se reduce */
+.caja-no-shrink {
+  flex-shrink: 0;               /* Evita que esta caja se encoja */
+}

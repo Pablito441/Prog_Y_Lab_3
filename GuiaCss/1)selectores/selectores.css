@@ -1,0 +1,21 @@
+/* Selector de tipo */
+p {
+    color: blue;
+}
+
+/* Selector de ID */
+#parrafo-especial {
+    color: red;
+    font-weight: bold;
+}
+
+/* Selector de clase */
+.parrafo-clase {
+    color: green;
+    font-style: italic;
+}
+
+/* Selector descendiente */
+div p {
+    color: purple;
+}

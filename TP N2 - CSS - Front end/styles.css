@@ -1,0 +1,183 @@
+
+/* Apartados que se repiten en todo los puntos */
+main{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #929292;
+    margin: 0px -8px 0px -8px;
+    padding: 10px 100px 10px 100px;
+
+}
+main h1{
+    text-align: start;
+    font-size: 18px;
+    border-bottom: 2px black solid;
+    text-decoration: double;
+}
+main section{
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 10px 30px 25px 30px;
+    margin: 10px 0px 20px 0px;
+}
+
+/* 4.1 */ 
+
+header {
+    background-color: rgb(69, 69, 69);
+    text-align: center;
+    text-decoration: double;
+    text-transform: none;
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px;
+    margin: -8px;
+}
+
+
+
+/* 4.2 */  
+
+.main-section-1 {
+    text-align: start;
+}
+
+.main-section-1 p{
+    font-size: 14px;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+.main-section-1 blockquote{
+    margin: 0px;
+    font-style: italic;
+    font-size: 12px;
+    padding: 14px 0px 14px 18px;
+    color: #6F746F;
+    background-color: #F7F7F7;
+    border-left: 4px rgba(0, 0, 0, 0.18) solid;
+}
+
+/* 4.3 */
+
+.main-section-2 div{
+    padding: 4px 20px 4px 20px;
+    margin: 15px;
+    text-align: start;
+    font-size: 14px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 8px -2px black;
+}
+.main-section-2-div1 {
+    background-color: white;
+    border: 1.5px black solid;
+}
+.main-section-2-div2 {
+    background-color: #FFE6B8;
+    border: 3px black solid;
+}
+
+/* 4.4 */
+
+.main-section-3 div{
+    padding: 4px 20px 4px 20px;
+    text-align: start;
+    font-size: 14px;
+    border-radius: 8px;
+}
+.relative{
+    position: relative;
+    background-color: #E7FEFF;
+}
+.absolute{
+    position: absolute;
+    background-color: #359C9C;
+    top: 70%;
+    left: 48%;
+}
+.main-section-3 {
+    padding: 10px 30px 70px 30px;
+}
+
+/* 4.5 */
+
+@media screen and (max-width: 768px) {
+    main{
+        background-color: rgb(210, 200, 236);
+        padding: 10px 20px 10px 20px;
+    
+    }
+    main h1{
+        font-size: 16px;
+    }
+    main section{
+        border-radius: 10px;
+        padding: 10px 15px 20px 15px;
+    }
+    .main-section-3 div{
+        border-radius: 6px;
+    }
+    .absolute{
+        top: 80%;
+        left: 20%;
+        margin: 0px 50px 0px 0px;
+    }
+  
+}
+
+/* 4.6 */
+
+.grid-container{
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+
+}
+
+.grid-item{
+    background-color: #909DFF;
+    border-radius: 4px;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+}
+
+/* 4.7 */
+
+
+.animacion {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: 2s ease-in-out;
+}
+.animacion:hover{
+    cursor: pointer; 
+    background-color: blue;
+}
+.mrelative {
+    position: relative;
+    overflow: hidden; /* Asegura que el contenido que se salga no sea visible */
+    padding-bottom: 140px;
+}
+
+.mover {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    border-radius: 50%;
+    animation: mover 2s infinite;
+    position: absolute; 
+    margin-top: 20px;
+}
+@keyframes mover {
+    0% {
+        left: 30px; 
+    }
+    50% {
+        left: calc(100% - 130px); 
+    }
+    100% {
+        left: 30px; 
+    }
+}
