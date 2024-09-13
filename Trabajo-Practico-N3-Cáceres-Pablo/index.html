@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tp3 - JavaScript</title>
+  </head>
+  <body>
+
+    <div>
+      <h1>Introducción al DOM</h1>
+      <h3>Ejercicio 1: Cambiar de color los parrafos</h3>
+      <p id="p1">Este es el primer párrafo.</p>
+      <p id="p2">Este es el segundo párrafo.</p>
+      <p id="p3">Este es el tercer párrafo.</p>
+  
+      <button id="cambiar-color">Cambiar color a azul</button>
+  
+      <h3>Ejercicio 2: Formulario con alerta</h3>
+      <form id="miFormulario">
+        <label for="campoTexto">Ingresa un texto:</label>
+        <input type="text" id="campoTexto" name="campoTexto" placeholder="Ingresa algo">
+        <button type="button" id="miBoton">Mostrar alerta</button>
+      </form>
+    </div>
+
+    <div>
+      <h1>Eventos en DOM</h1>
+      <h3>Ejercicio 1: Lista con elementos</h3>
+        <ul>
+          <li>Elemento 1</li>
+          <li>Elemento 2</li>
+          <li>Elemento 3</li>
+          <li>Elemento 4</li>
+        </ul>
+      <h3>Ejercicio 2: Campo de texto y botones</h3>
+        <form id="miFormulario2">
+          <input type="text" id="campoTexto2" name="campoTexto2" placeholder="Ingresa algo">
+          <button type="button" id="boton1">Deshabilitar Campo</button>
+          <button type="button" id="boton2">Habilitar Campo</button>
+        </form>
+    </div>
+
+    <div>
+      <h1>LocalStorage</h1>
+      <h3>Ejercicio 1</h3>
+
+      <form id="miFormulario3">
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" placeholder="tu-email@example.com" required>
+        <button type="submit">Guardar Correo</button>
+      </form>
+
+      <div id="correoGuardado"></div>
+      <button id="eliminarCorreo" style="display:none;">Eliminar Correo</button>
+    </div>
+
+
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
