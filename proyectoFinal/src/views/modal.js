@@ -1,21 +1,25 @@
 // ========POPUP========
 
 import { productoActivo, setproductoActivo } from "../../main";
+import { handleDeleteProduct } from "../services/products";
 
 
 const cancelButton = document.getElementById("cancelButton");
 cancelButton.addEventListener('click', ()=>{
-    handleCancelButton(); 
-})
-
-const handleCancelButton =()=>{
     closeModal();
-}
+})
 
 // FUNCIONES ABRIR C ERRAR MODAL
 export const openModal = () =>{
     const modal = document.getElementById("modalPopUp");
     modal.style.display = "flex";
+    const buttonDelete = document.getElementById("deleteButton"); 
+    if(productoActivo){
+        buttonDelete.style.display = "block";
+    }else{
+        buttonDelete.style.display = "none";
+
+    }
 
     if(productoActivo){
         const nombre = document.getElementById("nombre"),
@@ -46,3 +50,11 @@ const resetModal = ()=>{
     precio.value = 0;
     nombre.value = "";
 };  
+
+const deleteButton = document.getElementById("deleteButton");
+deleteButton.addEventListener("click",()=>{
+    handlebuttonDelete();
+});
+const handlebuttonDelete = ()=>{ 
+    handleDeleteProduct();
+};
