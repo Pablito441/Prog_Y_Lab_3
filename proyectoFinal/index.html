@@ -34,6 +34,8 @@
         </div>
       </div>
     </header>
+
+
     <!-- MAIN -->
     <main>
       <div class="container_view">
@@ -43,10 +45,18 @@
             </span></h2>
             <ul id="listFilter"></ul>
         </aside>
-        <div class="store"></div>
+
+        <div class="store" id="storeContainer">
+
+
+
+        </div>
+
         <div>
 
         </div>
+
+
         <!-- POPUP -->
         <div class="popUpContainer_principal" id="modalPopUp">
           <div class="popUpContainer">
@@ -57,11 +67,11 @@
               <input placeholder="Ingrese un nombre" id="nombre" type="text">
               <input placeholder="Ingrese una imagen" id="img" type="text">
               <input placeholder="precio" value="0" id="precio" type="number">
-              <select name="" id="categoria">
-                <option value="">Seleccione una categoria</option>
-                <option value="">Gaseosas</option>
-                <option value="">Hamburguesas</option>
-                <option value="">Papas</option>
+              <select id="categoria">
+                <option>Seleccione una categoria</option>
+                <option value="Gaseosas">Gaseosas</option>
+                <option value="Hamburguesas">Hamburguesas</option>
+                <option value="Papas">Papas</option>
               </select>
             </div> 
             <div class="containerButtonsPopUp">
@@ -72,8 +82,14 @@
 
           </div> 
         </div>
+
+
       </div>
+
+
     </main>
+
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>

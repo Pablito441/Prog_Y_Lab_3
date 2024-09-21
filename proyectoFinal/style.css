@@ -73,9 +73,68 @@
   height: 92vh; 
    
 }
+/* ========STORE======== */
 .store{
+  max-height: 92vh;
+  overflow-y: auto;
   height: 92vh;
-  background-color: red;
+  background-color: #eeee;
+  width: 100%;
+}
+.sectionStore{
+  background-color: #ffff;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+
+}
+.containerTittleSection{
+  margin: 1rem;
+  font-size: 3vh;
+  border-bottom: 1px solid grey;
+}
+.containerProductStore{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3,0.6fr);
+  gap: 2vh;
+
+}
+.containerTargetItem{
+  width: 20vw;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.4rem;
+  box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 0.4rem;
+  transition: .2s ease;
+}
+.containerTargetItem:hover{
+  cursor: pointer;
+  transform: scale(1.08);
+}
+.containerTargetItem h2{
+  font-size: 2vh;
+  text-align: center  ;
+
+}
+.targetProps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.sectionStore img{
+  width: 100%;
+  border-radius: 0.4rem;
+  box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.3);
 }
 /* =========LISTASIDE========= */
 .listAside {
@@ -106,6 +165,11 @@
   font-weight: 500;
   padding: 0.2rem; 
   border-radius: 0.4rem;
+}
+.listAside ul li:hover{
+  cursor: pointer;
+  background-color: #1e3f72;
+  color: white;
 }
 .liActive{
   background-color: #1e3f72;

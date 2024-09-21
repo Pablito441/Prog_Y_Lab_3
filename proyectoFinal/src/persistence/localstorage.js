@@ -1,5 +1,5 @@
 // ========LOCAL STORAGE========
-export const hanldeGetProductLocalStorage = () =>{
+export const handleGetProductLocalStorage = () =>{
     const products = JSON.parse(localStorage.getItem("products"));
     if(products){
         return products;
@@ -13,8 +13,8 @@ export const hanldeGetProductLocalStorage = () =>{
 //recibir un producto
 export const setInLocalStorage = (productIn) => {
     //traer todos los elementos
-    let producsInLocal = hanldeGetProductLocalStorage();
-    const existingIndex = producsInLocal.findIndex((productsLocal)=> productsLocal === productIn.id);
+    let producsInLocal = handleGetProductLocalStorage();
+    const existingIndex = producsInLocal.findIndex((productsLocal)=> productsLocal.id === productIn.id);
 
 
     //verificar si el elemeto existe
@@ -27,6 +27,6 @@ export const setInLocalStorage = (productIn) => {
         producsInLocal.push(productIn);
     }
 
-
-    localStorage.setItem('products', JSON.parse(producsInLocal));    
+    // setear el nuevo array
+    localStorage.setItem('products', JSON.stringify(producsInLocal));    
 }
